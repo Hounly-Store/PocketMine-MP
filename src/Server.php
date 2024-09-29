@@ -1076,7 +1076,7 @@ class Server{
 			if($generatorEntry === null){
 				$this->logger->error($this->language->translate(KnownTranslationFactory::pocketmine_level_generationError(
 					$worldName,
-					KnownTranslationFactory::pocketmine_level_unknownGenerator($generatorName)
+					KnownTranslationFactory::pocketmine_world_unknownGenerator($generatorName)
 				)));
 				return null;
 			}
@@ -1085,7 +1085,7 @@ class Server{
 			}catch(InvalidGeneratorOptionsException $e){
 				$this->logger->error($this->language->translate(KnownTranslationFactory::pocketmine_level_generationError(
 					$worldName,
-					KnownTranslationFactory::pocketmine_level_invalidGeneratorOptions($generatorOptions, $generatorName, $e->getMessage())
+					KnownTranslationFactory::pocketmine_world_invalidGeneratorOptions($generatorOptions, $generatorName, $e->getMessage())
 				)));
 				return null;
 			}
